@@ -22,7 +22,6 @@ public class GalleryScreen extends PageObject {
 
     public boolean isProductDisplayed() {
         waitFor(ExpectedConditions.visibilityOf(lblProduct));
-        
         return lblProduct.isDisplayed();
     }
 
