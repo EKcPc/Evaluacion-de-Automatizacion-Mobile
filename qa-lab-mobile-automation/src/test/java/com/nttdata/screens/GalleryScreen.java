@@ -13,6 +13,20 @@ public class GalleryScreen extends PageObject {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Sauce Labs Backpack\"]")
     private WebElement backpackProduct;
 
+    @AndroidFindBy (xpath ="//android.widget.ImageView[@content-desc=\"Increase item quantity\"]")
+    private WebElement increaseUnit;
+
+    @AndroidFindBy (xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
+    private WebElement btnInCar;
+
+    @AndroidFindBy (xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
+    private WebElement btnAddCar;
+
+    @AndroidFindBy (xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/titleTV\"]")
+    private WebElement lblBackpackCar;
+
+
+
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Sauce Labs Bolt T-Shirt\"]")
     private WebElement boltProduct;
 
@@ -26,17 +40,31 @@ public class GalleryScreen extends PageObject {
     }
 
 
-    public void clickBackpack() {
-        backpackProduct.click();
+    public WebElement getBackpackProduct() {
+        return backpackProduct;
     }
 
-    public void clickBolt() {
-        boltProduct.click();
-
+    public WebElement getBoltProduct(){
+        return boltProduct;
     }
 
-    public void clickBike() {
-        bikeProduct.click();
+    public WebElement getBikeProduct(){
+        return bikeProduct;
+    }
+
+    public WebElement getBtnInCar() {
+        return btnInCar;
+    }
+
+    public WebElement getBtnAddCar() {
+        return btnInCar;
+    }
+    public WebElement getIncreaseUnit() {
+        return increaseUnit;
+    }
+
+    public WebElement getLblBackpackCar() {
+        return lblBackpackCar;
     }
 
 
