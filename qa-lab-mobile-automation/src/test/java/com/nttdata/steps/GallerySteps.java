@@ -17,13 +17,13 @@ public class GallerySteps {
             case "Sauce Labs Backpack":
                 galleryScreen.getBackpackProduct().click();
                 galleryScreen.getBtnAddCar().click();
-                validarCarritoActualizado("Backpack");
+                validarCarritoActualizado("Sauce Labs Backpack");
                 break;
 
             case "Sauce Labs Bolt - T-Shirt":
                 galleryScreen.getBoltProduct().click();
                 galleryScreen.getBtnAddCar().click();
-                validarCarritoActualizado("Bolt - T-Shirt");
+                validarCarritoActualizado("Sauce Labs Bolt - T-Shirt");
                 break;
 
             case "Sauce Labs Bike Light":
@@ -32,7 +32,7 @@ public class GallerySteps {
                 if (unidades == 2) {
                     galleryScreen.getBtnAddCar().click();
                 }
-                validarCarritoActualizado("Bike Light");
+                validarCarritoActualizado("Sauce Labs Bike Light");
                 break;
 
             default:
@@ -45,15 +45,15 @@ public class GallerySteps {
         galleryScreen.getBtnInCar().click();
         String mensajeError = "El producto " + producto + " no se encuentra en el carrito";
         switch (producto) {
-            case "Backpack":
+            case "Sauce Labs Backpack":
                 Assert.assertTrue(mensajeError, galleryScreen.getLblBackpackCar().isDisplayed());
                 break;
 
-            case "Bolt - T-Shirt":
-                Assert.assertTrue(mensajeError, galleryScreen.getLblBoltCar().isDisplayed()); // Asegúrate de tener lblBoltCar definido
+            case "Sauce Labs Bolt - T-Shirt":
+                Assert.assertTrue(mensajeError, galleryScreen.getLblBoltCar().isDisplayed());
                 break;
 
-            case "Bike Light":
+            case "Sauce Labs Bike Light":
                 Assert.assertTrue(mensajeError, galleryScreen.getLblBikeCar().isDisplayed());
                 break;
 

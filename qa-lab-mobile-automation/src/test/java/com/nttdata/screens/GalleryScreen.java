@@ -13,19 +13,23 @@ public class GalleryScreen extends PageObject {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Sauce Labs Backpack\"]")
     private WebElement backpackProduct;
 
-    @AndroidFindBy (xpath ="//android.widget.ImageView[@content-desc=\"Increase item quantity\"]")
+    @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Increase item quantity\"]")
     private WebElement increaseUnit;
 
-    @AndroidFindBy (xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
     private WebElement btnInCar;
 
-    @AndroidFindBy (xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Tap to add product to cart\"]")
     private WebElement btnAddCar;
 
-    @AndroidFindBy (xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/titleTV\"]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/titleTV\" and @text=\"Sauce Labs Backpack\"]")
     private WebElement lblBackpackCar;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/titleTV\" and @text=\"Sauce Labs Bolt T-Shirt\"]")
+    private WebElement lblBoltCar;
 
+    @AndroidFindBy (xpath = "")
+    private WebElement lblBikeCar;
 
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Sauce Labs Bolt T-Shirt\"]")
     private WebElement boltProduct;
@@ -44,11 +48,11 @@ public class GalleryScreen extends PageObject {
         return backpackProduct;
     }
 
-    public WebElement getBoltProduct(){
+    public WebElement getBoltProduct() {
         return boltProduct;
     }
 
-    public WebElement getBikeProduct(){
+    public WebElement getBikeProduct() {
         return bikeProduct;
     }
 
@@ -59,12 +63,21 @@ public class GalleryScreen extends PageObject {
     public WebElement getBtnAddCar() {
         return btnInCar;
     }
+
     public WebElement getIncreaseUnit() {
         return increaseUnit;
     }
 
     public WebElement getLblBackpackCar() {
         return lblBackpackCar;
+    }
+
+    public WebElement getLblBoltCar() {
+        return lblBoltCar;
+    }
+
+    public WebElement getLblBikeCar() {
+        return lblBikeCar;
     }
 
 

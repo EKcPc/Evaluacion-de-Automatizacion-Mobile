@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import org.jetbrains.annotations.NotNull;
 
 public class GalleryStepsDefs {
 
@@ -29,11 +30,10 @@ public class GalleryStepsDefs {
     }
 
 
-
-
     @Then("valido el carrito de compra actualice correctamente")
-    public void validoElCarritoDeCompraActualiceCorrectamente() {
-        gallerySteps.validarCarritoActualizado();
+    public void validoElCarritoDeCompraActualiceCorrectamente(String producto) {
+        gallerySteps.validarCarritoActualizado(producto);
+
     }
 
 
